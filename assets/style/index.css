@@ -1,10 +1,14 @@
+body{
+    background-color: #222738;
+}
 #container {
     width: 850px;
     border: 2px solid black;
     border-radius: 20px;
     margin: 10px auto;
     padding: 10px;
-    background-color: darkgray;
+    background-color: #6e7888;
+
 }
 
 #pieceContainer {
@@ -34,11 +38,15 @@ ul {
 
 ul button {
     width: 100px;
-    border: 1px solid black;
+    border: 3px solid black;
     font-size: 20px;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 10px;
     margin-top: 10px;
+    background-color: #6e7888;
+}
+button:hover{
+    background: #4cffd7;
 }
 .button {
     width: 100px;
