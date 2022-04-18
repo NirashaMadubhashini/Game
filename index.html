@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Puzzle Game</title>
+    <title>Title</title>
     <link rel="stylesheet" href="assets/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/style/index.css">
 </head>
 <body>
 <div id="container">
     <div id="pieceContainer"></div>
-<!--    <button id="btnNext" class="button">Next</button>-->
     <div id="puzzleContainer"></div>
     <ul id="buttons">
         <li>
@@ -17,6 +16,9 @@
         </li>
         <li>
             <button id="btnReset">Reset</button>
+        </li>
+        <li>
+            <a href="index2.html"><button id="btnNext">Next</button></a>
         </li>
     </ul>
 </div>
@@ -86,10 +88,23 @@
                 }
             }
             $("#pieceContainer").text("Wow! You Won The Game!!");
-            // $("#btnNext").show()
-            // $("#btnReset").hide()
-            // $("#btnStart").hide()
+            var emptyString = createPieces(false);
+            $("#puzzleContainer").html(emptyString);
+            $(this).hide();
+            $("#btnNext").show()
+            $("#btnReset").hide()
             return true;
+
+            $("#btnNext").click(function () {
+                var newPieces = createPieces(true);
+                $("#puzzleContainer").html(newPieces);
+                $("#puzzleContainer").html(result);
+                $(this).hide();
+                $("#btnStart").show();
+                $("#pieceContainer").empty();
+
+            });
+
         }
 
         function implementLogic() {
