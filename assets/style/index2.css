@@ -76,3 +76,16 @@ button:hover{
 }
 
 
+#txt {
+    font-size: 20px;
+}
+
+#time {
+    font-size: 20px;
+    color: #192a56;
+}
+
+#note {
+    font-size: 20px;
+    color:#0c2461;
+}
