@@ -21,9 +21,9 @@
             <a href="index2.html"><button id="btnNext">Next</button></a>
         </li>
     </ul>
-    <input id="time" type="button" value="Start count!" onClick="doTimer()">
+<!--    <input id="time" type="button" value="Start count!" onClick="doTimer()">-->
     <input type="text" id="txt">
-    <p id="note"><b>Click on the button above before start the game. This will count forever you stop playing.</b></p>
+<!--    <p id="note"><b>Click on the button above before start the game. This will count forever you stop playing.</b></p>-->
 </div>
 
 
@@ -77,6 +77,7 @@
             $(this).hide();
             $("#btnReset").show()
             implementLogic()
+            return doTimer();
         });
         $("#btnReset").click(function () {
             var newPieces = createPieces(true);
@@ -84,6 +85,7 @@
             $(this).hide();
             $("#btnStart").show();
             $("#pieceContainer").empty();
+
         });
 
         function createPieces(withImage) {
